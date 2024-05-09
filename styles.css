@@ -32,23 +32,26 @@ p {
     justify-content: space-between;
 }
 
-/* Base navbar styles */
+/* Base styles optimized for mobile */
 .navbar {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
 }
 
 .navbar ul {
     list-style: none;
     padding: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .navbar li {
-    margin-right: 10px; /* Spacing between menu items */
+    display: block; /* Full width for menu items */
+    margin-right: 0; /* Remove right margin on mobile */
 }
 
 .navbar a {
@@ -57,11 +60,12 @@ p {
     text-decoration: none;
     color: black;
     transition: background-color 0.3s; /* Smooth transition for background color */
+    width: 100%; /* Full width links */
 }
 
 /* Menu button styles */
 .menu-btn {
-    display: none; /* Hidden by default, shown in media query for mobile */
+    display: flex; /* Show menu button on small screens */
     flex-direction: column;
 }
 
@@ -73,39 +77,86 @@ p {
     transition: 0.4s; /* Smooth transition for menu button animations */
 }
 
-/* Media query for mobile devices */
-@media screen and (max-width: 768px) {
-    .menu-btn {
-        display: flex; /* Show menu button on small screens */
+#menu-items {
+    display: none; /* Initially hide menu items on mobile */
+}
+
+.menu-btn.open div:nth-child(1) {
+    transform: rotate(45deg) translate(-13px, 0px);
+}
+
+.menu-btn.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(18px, -32px);
+}
+
+#menu-items.fullscreen {
+    position: fixed;
+    top: 90px; /* Set this to the height of your header */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100% - 60px);
+    z-index: 999;
+}
+
+.body-no-scroll {
+    overflow: hidden;
+    height: 100%; /* Optional: Ensures the page height does not grow */
+    width: 100%; /* Optional: Ensures the page width does not grow */
+}
+
+
+/* Media Query for Desktop Screens */
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row; /* Revert flex direction */
     }
 
     .navbar ul {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row; /* Horizontal menu */
+        align-items: center;
     }
 
     .navbar li {
-        display: block; /* Full width for menu items */
-        margin-right: 0; /* Remove right margin on mobile */
+        display: inline-block; /* Align items inline for desktop */
+        margin-right: 10px; /* Restore spacing */
+    }
+
+    .navbar a {
+        width: auto; /* Auto width for desktop links */
+    }
+
+    .menu-btn {
+        display: none; /* Hide menu button on desktop */
     }
 
     #menu-items {
-        display: none; /* Initially hide menu items on mobile */
+        display: flex; /* Always show menu items on desktop */
     }
 
-    .menu-btn.open div:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+    #menu-items.fullscreen {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        z-index: 1; /* Lower the z-index */
     }
-    
-    .menu-btn.open div:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .menu-btn.open div:nth-child(3) {
-        transform: rotate(-45deg) translate(14px, -13px);
-    }
-    
 }
+
+/* slides */
 
 * {box-sizing: border-box}
 .mySlides {display: none}

@@ -1,28 +1,48 @@
 document.getElementById('menu-btn').addEventListener('click', function() {
-    var items = document.getElementById('menu-items');
-    var menuButton = document.getElementById('menu-btn');
-    if (items.style.display === 'block') {
-        items.style.display = 'none';
-        menuButton.classList.remove('open');  // Remove the 'open' class to revert to hamburger icon
-    } else {
-        items.style.display = 'block';
-        menuButton.classList.add('open');  // Add the 'open' class to change to 'X' icon
-    }
+    console.log("Menu button clicked.");
+    toggleMenu();
 });
 
-// Reset menu display on window resize
+document.querySelectorAll('#menu-items a').forEach(item => {
+    item.addEventListener('click', function() {
+        console.log("Menu item clicked: " + this.innerText);
+        closeMenu(); // Specifically close the menu when an item is clicked
+    });
+});
+
+function toggleMenu() {
+    var items = document.getElementById('menu-items');
+    if (items.style.display === 'none' || !items.style.display) {
+        openMenu();
+    } else {
+        closeMenu();
+    }
+}
+
+function openMenu() {
+    var items = document.getElementById('menu-items');
+    items.style.display = 'block';
+    items.classList.add('fullscreen');
+    document.getElementById('menu-btn').classList.add('open');
+    document.body.classList.add('body-no-scroll'); // Prevent scrolling
+    console.log("Menu opened.");
+}
+
+function closeMenu() {
+    var items = document.getElementById('menu-items');
+    items.style.display = 'none';
+    items.classList.remove('fullscreen');
+    document.getElementById('menu-btn').classList.remove('open');
+    document.body.classList.remove('body-no-scroll'); // Allow scrolling again
+    console.log("Menu closed.");
+}
+
+// Ensure scrolling is enabled again if resizing might have closed the menu implicitly
 window.addEventListener('resize', function() {
-    var items = document.getElementById('menu-items');
-    var menuButton = document.getElementById('menu-btn');
-    if (window.innerWidth > 768) {
-        items.style.display = 'flex'; // Ensure it's visible and using flex layout
-        menuButton.classList.remove('open');  // Ensure it reverts to hamburger icon on larger screens
-    } else {
-        items.style.display = 'none'; // Ensure it's hidden on mobile when menu button is not clicked
-        menuButton.classList.remove('open');  // Ensure it reverts to hamburger icon
+    if (!document.getElementById('menu-items').classList.contains('fullscreen')) {
+        document.body.classList.remove('body-no-scroll');
     }
 });
-
 
 
 var slideIndex = 1;
