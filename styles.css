@@ -32,69 +32,79 @@ p {
     justify-content: space-between;
 }
 
-/* navbar */
-
-.navbar li a {
-    color: #fff; /* White */
-}
-
-.navbar li a:hover {
-    background-color: #ff6347; /* Tomato */
-}
-
-.navbar .menu-btn div {
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    margin: 5px 0;
-    transition: 0.4s;
-}
-
-/* Initially hide the menu button */
-.navbar .menu-btn {
-    display: none;
+/* Base navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar ul {
     list-style: none;
     padding: 0;
-    display: flex; /* Using flexbox to horizontally align items */
-    justify-content: center; /* Centering the menu items horizontally */
-    align-items: center; /* Aligning items vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.navbar ul li {
-    display: inline-block; /* Making the list items inline for horizontal layout */
-    margin-right: 10px; /* Adding some space between the menu items */
+.navbar li {
+    margin-right: 10px; /* Spacing between menu items */
 }
 
-.navbar ul li a {
+.navbar a {
     display: block;
     padding: 8px 16px;
     text-decoration: none;
     color: black;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Menu button styles */
+.menu-btn {
+    display: none; /* Hidden by default, shown in media query for mobile */
+    flex-direction: column;
+}
+
+.menu-btn div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+    transition: 0.4s; /* Smooth transition for menu button animations */
 }
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
-    .navbar .menu-btn {
-        display: block; /* Show the menu button on small screens */
+    .menu-btn {
+        display: flex; /* Show menu button on small screens */
     }
 
     .navbar ul {
-        flex-direction: column; /* Stack the menu items vertically on small screens */
-        align-items: flex-start; /* Align items to the start of the navbar */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .navbar #menu-items {
-        display: none; /* Initially hide the menu items on mobile */
+    .navbar li {
+        display: block; /* Full width for menu items */
+        margin-right: 0; /* Remove right margin on mobile */
     }
 
-    .navbar ul li {
-        display: block; /* Each item takes full width */
-        margin-right: 0; /* No margin on the right for mobile */
+    #menu-items {
+        display: none; /* Initially hide menu items on mobile */
     }
+
+    .menu-btn.open div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .menu-btn.open div:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-btn.open div:nth-child(3) {
+        transform: rotate(-45deg) translate(14px, -13px);
+    }
+    
 }
 
 * {box-sizing: border-box}
