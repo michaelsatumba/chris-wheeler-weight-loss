@@ -1,7 +1,7 @@
 body {
     background-color: #fafafa; /* Lighter gray for a brighter feel */
     color: #333333; /* Slightly darker gray for better readability */
-    font-family: Arial, sans-serif;
+    font-family: "Rubik", sans-serif;
 }
 
 h1, h2, h3 {
@@ -11,7 +11,6 @@ h1, h2, h3 {
 
 p {
     color: #333333; 
-    font-family: "Rubik", sans-serif;
 }
 
 .testimonial {
