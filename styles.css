@@ -13,6 +13,16 @@ p {
     color: white; 
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 .testimonial {
     background-color: black; /* White background for clean look */
     border: 1px solid #dddddd; /* Lighter gray border for a subtle contrast */
@@ -217,7 +227,6 @@ img {vertical-align: middle;}
 .prev:hover, .next:hover {
     background-color: #45474B;
 }
-
 
 /* Media Query for Desktop Screens */
 @media screen and (min-width: 768px) {
