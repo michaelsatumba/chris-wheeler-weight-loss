@@ -2,6 +2,7 @@ body {
     background-color: black; /* Lighter gray for a brighter feel */
     color: white; /* Slightly darker gray for better readability */
     font-family: "Rubik", sans-serif;
+    padding: 15px;
 }
 
 h1, h2, h3 {
@@ -27,7 +28,7 @@ a:hover {
     background-color: black; /* White background for clean look */
     border: 1px solid #dddddd; /* Lighter gray border for a subtle contrast */
     padding: 10px;
-    margin: 10px;
+    margin-bottom: 10px;
     border-radius: 20px;
 }
 
@@ -104,7 +105,7 @@ a:hover {
 
 #menu-items.fullscreen {
     position: fixed;
-    top: 95px; /* Set this to the height of your header */
+    top: 125px; /* Set this to the height of your header */
     left: 0;
     right: 0;
     bottom: 0;
@@ -123,14 +124,6 @@ a:hover {
     height: 100%; /* Optional: Ensures the page height does not grow */
     width: 100%; /* Optional: Ensures the page width does not grow */
 }
-
-/* Media Query for iPhone 14 Pro Max */
-@media screen and (min-width: 430px) {
-    #menu-items.fullscreen {
-        top: 58px;
-    }
-}
-
 
 /* Media Query for Desktop Screens */
 @media screen and (min-width: 768px) {
