@@ -215,7 +215,7 @@ img {vertical-align: middle;}
 
 /* Add hover effects */
 .prev:hover, .next:hover {
-    background-color: gray;
+    background-color: #45474B;
 }
 
 
@@ -228,6 +228,3 @@ img {vertical-align: middle;}
         margin: auto; /* Centers the block element horizontally */
     }
 }
-
-
-
