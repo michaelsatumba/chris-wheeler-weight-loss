@@ -1,20 +1,20 @@
 body {
-    background-color: #fafafa; /* Lighter gray for a brighter feel */
-    color: #333333; /* Slightly darker gray for better readability */
+    background-color: black; /* Lighter gray for a brighter feel */
+    color: white; /* Slightly darker gray for better readability */
     font-family: "Rubik", sans-serif;
 }
 
 h1, h2, h3 {
-    color: black; 
+    color: white; 
     font-family: "Poetsen One", sans-serif;
 }
 
 p {
-    color: #333333; 
+    color: white; 
 }
 
 .testimonial {
-    background-color: #ffffff; /* White background for clean look */
+    background-color: black; /* White background for clean look */
     border: 1px solid #dddddd; /* Lighter gray border for a subtle contrast */
     padding: 10px;
     margin: 10px;
@@ -57,7 +57,7 @@ p {
     display: block;
     padding: 8px 16px;
     text-decoration: none;
-    color: black;
+    color: white;
     transition: background-color 0.3s; /* Smooth transition for background color */
     width: 100%; /* Full width links */
 }
@@ -71,7 +71,7 @@ p {
 .menu-btn div {
     width: 30px;
     height: 3px;
-    background-color: black;
+    background-color: white;
     margin: 5px 0;
     transition: 0.4s; /* Smooth transition for menu button animations */
 }
@@ -98,7 +98,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: white;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
