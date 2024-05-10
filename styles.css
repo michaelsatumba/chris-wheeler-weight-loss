@@ -120,9 +120,7 @@ a:hover {
 }
 
 .body-no-scroll {
-    overflow: hidden;
-    height: 100%; /* Optional: Ensures the page height does not grow */
-    width: 100%; /* Optional: Ensures the page width does not grow */
+    overflow: hidden; /* Prevent scrolling when menu is open */
 }
 
 /* Media Query for Desktop Screens */
