@@ -226,6 +226,7 @@ img {vertical-align: middle;}
 /* Add hover effects */
 .prev:hover, .next:hover {
     background-color: #45474B;
+    text-decoration: none;
 }
 
 /* Media Query for Desktop Screens */
