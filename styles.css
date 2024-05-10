@@ -194,7 +194,7 @@ img {vertical-align: middle;}
     width: auto;
     padding: 16px;
     margin-top: -22px; /* Adjust this value to center the arrow vertically */
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
