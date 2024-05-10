@@ -105,13 +105,20 @@ p {
     justify-content: center;
     width: 100%;
     height: calc(100% - 60px);
-    z-index: 999;
+    z-index: 1;
 }
 
 .body-no-scroll {
     overflow: hidden;
     height: 100%; /* Optional: Ensures the page height does not grow */
     width: 100%; /* Optional: Ensures the page width does not grow */
+}
+
+/* Media Query for iPhone 14 Pro Max */
+@media screen and (min-width: 430px) {
+    #menu-items.fullscreen {
+        top: 60px;
+    }
 }
 
 
