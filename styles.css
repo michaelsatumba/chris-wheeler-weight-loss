@@ -94,7 +94,7 @@ p {
 
 #menu-items.fullscreen {
     position: fixed;
-    top: 90px; /* Set this to the height of your header */
+    top: 95px; /* Set this to the height of your header */
     left: 0;
     right: 0;
     bottom: 0;
@@ -117,7 +117,7 @@ p {
 /* Media Query for iPhone 14 Pro Max */
 @media screen and (min-width: 430px) {
     #menu-items.fullscreen {
-        top: 60px;
+        top: 58px;
     }
 }
 
