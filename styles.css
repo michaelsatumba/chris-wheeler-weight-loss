@@ -24,12 +24,14 @@ a:hover {
     text-decoration: underline;
 }
 
-.testimonial {
-    background-color: black; /* White background for clean look */
-    border: 1px solid #dddddd; /* Lighter gray border for a subtle contrast */
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 20px;
+.testimonials-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials-container div {
+    width: 100%;
+    margin: 1%;
 }
 
 #contact {
@@ -228,4 +230,14 @@ img {vertical-align: middle;}
         display: block; /* Makes img a block element which can be centered */
         margin: auto; /* Centers the block element horizontally */
     }
+
+    .testimonials-container {
+        align-items: center;
+    }
+
+    .testimonials-container div {
+        width: 40%;
+        margin: 1%;
+    }
+
 }

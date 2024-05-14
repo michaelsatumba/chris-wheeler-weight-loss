@@ -4,9 +4,14 @@ document.getElementById('menu-btn').addEventListener('click', function() {
 });
 
 document.querySelectorAll('#menu-items a').forEach(item => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default action
         console.log("Menu item clicked: " + this.innerText);
-        closeMenu(); // Specifically close the menu when an item is clicked
+        var sectionId = this.getAttribute('href').slice(1); // Get the corresponding section ID
+        document.getElementById(sectionId).scrollIntoView({behavior: "smooth"}); // Scroll to the section
+        if (document.getElementById('menu-btn').classList.contains('open')) {
+            closeMenu(); // Specifically close the menu when an item is clicked and the menu is 'open'
+        }
     });
 });
 
