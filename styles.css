@@ -90,7 +90,11 @@ a:hover {
 }
 
 #menu-items {
-    display: none; /* Initially hide menu items on mobile */
+    display: none; /* By default, the menu is not displayed */
+}
+
+#menu-items.open {
+    display: block; /* When the 'open' class is added, the menu is displayed */
 }
 
 .menu-btn.open div:nth-child(1) {

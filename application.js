@@ -9,7 +9,7 @@ document.querySelectorAll('#menu-items a').forEach(item => {
         console.log("Menu item clicked: " + this.innerText);
         var sectionId = this.getAttribute('href').slice(1); // Get the corresponding section ID
         document.getElementById(sectionId).scrollIntoView({behavior: "smooth"}); // Scroll to the section
-        if (document.getElementById('menu-btn').classList.contains('open')) {
+        if (document.getElementById('menu-items').classList.contains('open')) {
             closeMenu(); // Specifically close the menu when an item is clicked and the menu is 'open'
         }
     });
@@ -17,16 +17,16 @@ document.querySelectorAll('#menu-items a').forEach(item => {
 
 function toggleMenu() {
     var items = document.getElementById('menu-items');
-    if (items.style.display === 'none' || !items.style.display) {
-        openMenu();
-    } else {
+    if (items.classList.contains('open')) {
         closeMenu();
+    } else {
+        openMenu();
     }
 }
 
 function openMenu() {
     var items = document.getElementById('menu-items');
-    items.style.display = 'block';
+    items.classList.add('open');
     items.classList.add('fullscreen');
     document.getElementById('menu-btn').classList.add('open');
     document.body.classList.add('body-no-scroll'); // Prevent scrolling
@@ -35,7 +35,7 @@ function openMenu() {
 
 function closeMenu() {
     var items = document.getElementById('menu-items');
-    items.style.display = 'none';
+    items.classList.remove('open');
     items.classList.remove('fullscreen');
     document.getElementById('menu-btn').classList.remove('open');
     document.body.classList.remove('body-no-scroll'); // Allow scrolling again
