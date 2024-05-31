@@ -74,8 +74,8 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
 }
 
-// Automatic slideshow - changes every 5 seconds
+// Automatic slideshow - changes every 60 seconds
 setInterval(function() {
     slideIndex++;
     showSlides(slideIndex);
-  }, 5000);
+  }, 60000);
