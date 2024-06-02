@@ -115,11 +115,11 @@ a:hover {
 
 #menu-items.fullscreen {
     position: fixed;
-    top: 125px; /* Set this to the height of your header */
+    top: 145px; /* Set this to the height of your header */
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: black;
+    background-color: rgb(70, 175, 110);
     width: 100%;
     height: calc(100% - 60px);
     z-index: 1;
