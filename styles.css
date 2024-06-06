@@ -198,6 +198,14 @@ img {vertical-align: middle;}
     border-radius: 20px;
 }
 
+.mySlides video {
+    width: 80%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    margin: auto;
+}
+
 /* Positioning and styling the arrows */
 .prev, .next {
     cursor: pointer;
@@ -238,6 +246,10 @@ img {vertical-align: middle;}
         height: auto; /* Maintain aspect ratio */
         display: block; /* Makes img a block element which can be centered */
         margin: auto; /* Centers the block element horizontally */
+    }
+
+    .mySlides video {
+        width: 30%;
     }
 
     .testimonials-container {
