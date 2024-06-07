@@ -130,6 +130,10 @@ a:hover {
     z-index: 1;
 }
 
+#menu-items li {
+    white-space: nowrap;
+}
+
 .body-no-scroll {
     overflow: hidden; /* Prevent scrolling when menu is open */
 }
