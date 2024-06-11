@@ -124,7 +124,7 @@ a:hover {
 
 #menu-items.fullscreen {
     position: fixed;
-    top: 185px; /* Set this to the height of your header */
+    top: 190px; /* Set this to the height of your header */
     left: 0;
     right: 0;
     bottom: 0;
