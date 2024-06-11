@@ -53,6 +53,10 @@ a:hover {
     justify-content: space-between;
 }
 
+.title {
+    margin-right: 10px;
+}
+
 /* Base styles optimized for mobile */
 .navbar {
     display: flex;
@@ -120,7 +124,7 @@ a:hover {
 
 #menu-items.fullscreen {
     position: fixed;
-    top: 145px; /* Set this to the height of your header */
+    top: 185px; /* Set this to the height of your header */
     left: 0;
     right: 0;
     bottom: 0;
