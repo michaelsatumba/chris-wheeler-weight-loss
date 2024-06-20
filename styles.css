@@ -141,6 +141,7 @@ a:hover {
 
 #menu-items li {
     white-space: nowrap;
+    font-size: 25px;
 }
 
 .body-no-scroll {
