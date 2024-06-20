@@ -12,7 +12,7 @@ h1, h3 {
 
 p {
     color: white;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 a {
@@ -147,46 +147,6 @@ a:hover {
     overflow: hidden; /* Prevent scrolling when menu is open */
 }
 
-/* Media Query for Desktop Screens */
-@media screen and (min-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row; /* Revert flex direction */
-    }
-
-    .navbar ul {
-        flex-direction: row; /* Horizontal menu */
-        align-items: center;
-    }
-
-    .navbar li {
-        display: inline-block; /* Align items inline for desktop */
-        margin-right: 10px; /* Restore spacing */
-    }
-
-    .navbar a {
-        width: auto; /* Auto width for desktop links */
-    }
-
-    .menu-btn {
-        display: none; /* Hide menu button on desktop */
-    }
-
-    #menu-items {
-        display: flex; /* Always show menu items on desktop */
-    }
-
-    #menu-items.fullscreen {
-        position: static;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-        z-index: 1; /* Lower the z-index */
-    }
-}
-
 /* slides */
 
 * {box-sizing: border-box}
@@ -254,6 +214,43 @@ img {vertical-align: middle;}
 
 /* Media Query for Desktop Screens */
 @media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row; /* Revert flex direction */
+    }
+
+    .navbar ul {
+        flex-direction: row; /* Horizontal menu */
+        align-items: center;
+    }
+
+    .navbar li {
+        display: inline-block; /* Align items inline for desktop */
+        margin-right: 10px; /* Restore spacing */
+    }
+
+    .navbar a {
+        width: auto; /* Auto width for desktop links */
+    }
+
+    .menu-btn {
+        display: none; /* Hide menu button on desktop */
+    }
+
+    #menu-items {
+        display: flex; /* Always show menu items on desktop */
+    }
+
+    #menu-items.fullscreen {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        z-index: 1; /* Lower the z-index */
+    }
+
     .mySlides img {
         width: 40%; /* Smaller width on desktop */
         height: auto; /* Maintain aspect ratio */
@@ -274,4 +271,22 @@ img {vertical-align: middle;}
         margin: 1%;
     }
 
+}
+
+@media only screen and (max-width: 429px) {
+    /* CSS rules for devices with a width of 430px or less go here */
+    p {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 344px) {
+    /* CSS rules for devices with a width of 430px or less go here */
+    p {
+        font-size: 17px;
+    }
+}
+
+.no-wrap {
+    white-space: nowrap;
 }
