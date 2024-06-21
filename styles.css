@@ -29,6 +29,11 @@ a:hover {
     height: 100vh;
 }
 
+#Contact-Me p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
 .testimonials-container {
     display: flex;
     flex-direction: column;
@@ -276,15 +281,22 @@ img {vertical-align: middle;}
 
 @media only screen and (max-width: 429px) {
     /* CSS rules for devices with a width of 430px or less go here */
-    p {
+    #Contact-Me p {
         font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    /* CSS rules for devices with a width of 430px or less go here */
+    #Contact-Me p {
+        font-size: 16px;
     }
 }
 
 @media only screen and (max-width: 344px) {
     /* CSS rules for devices with a width of 430px or less go here */
-    p {
-        font-size: 17px;
+    #Contact-Me p {
+        font-size: 16px;
     }
 }
 
